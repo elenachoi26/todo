@@ -1,0 +1,17 @@
+<h2> TODO Details </h2>
+<h3> Modifying Page</h3>
+
+<div class="container" *ngIf="todo"> 
+    <div class="row">
+        <div class="col-3"><label> todo title: </label></div>
+        <div class="col-9"><input type="text" id="todo-title" [(ngModel)]="todo.title" placeholder="enter-title"></div>
+    </div>
+    <div class="row">
+        <div class="col-3"><label> todo description: </label></div>
+        <div class="col-9"><input type="text" id="todo-description" [(ngModel)]="todo.description" placeholder="enter-description"></div>
+    </div>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-9"> <button type="button" (click)="goBack()" class="btn btn-success">submit</button>  </div>
+    </div>
+</div>

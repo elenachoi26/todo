@@ -1,0 +1,14 @@
+<h2>Todo List</h2>
+
+
+<div class="container text-center">
+    
+    <div class="row" *ngFor="let todo of todos">
+        <div class="col-6"><a routerLink="/detail/{{todo.id}}">{{todo.title}}</a></div>
+        <div class="col-6"><button type="button" (click)="deleteTodo(todo.id)" class="btn btn-danger">delete</button></div>
+      </div>
+      <div class="row">
+        <div class="col"><button type="button" (click)="createTodo()" class="btn btn-primary">create</button></div>
+      </div>
+  </div>
+
